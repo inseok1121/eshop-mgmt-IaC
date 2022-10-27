@@ -101,11 +101,9 @@ kubectl patch service argocd-server -n argocd -p '{"spec": {"type": "LoadBalance
 <br>
 
 Argocd cli Install
+
 ```bash
-VERSION=$(curl --silent "https://api.github.com/repos/argoproj/argo-cd/releases/latest" | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')
-```
-```bash
-sudo curl --silent --location -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/download/$VERSION/argocd-linux-amd64
+sudo curl --silent --location -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/download/v2.4.8/argocd-linux-amd64
 ```
 ```bash
 sudo chmod +x /usr/local/bin/argocd
