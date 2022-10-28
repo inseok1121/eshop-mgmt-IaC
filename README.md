@@ -88,12 +88,15 @@ aws eks --region=us-east-1 update-kubeconfig --name=eshop-mgmt-eks-cluster --ali
 <br>
 
 Argocd Container Install
+
 ```bash
 kubectl create namespace argocd
 ```
+
 ```bash
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.0.4/manifests/install.yaml
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.4.11/manifests/install.yaml
 ```
+
 ```bash
 kubectl patch service argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
 ```
